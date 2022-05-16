@@ -4,65 +4,44 @@
     <meta charset="UTF-8">
     <title>MemSlider</title>
     <link rel="stylesheet" href="src/css/normalize.css">
-    <link rel="stylesheet" href="src/css/stile.css">
+    <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
     <div class="container">
-        <h1> Все в процессе к вечеру среды доделаю.<br>Спасибо за понимание</h1>
+<!--        <h1> Все в процессе к вечеру среды доделаю.<br>Спасибо за понимание</h1>-->
         <div class="slider">
-            <div class="nav-btn">
-                <input type="radio" name="slider" id="slide1" checked>
-                <input type="radio" name="slider" id="slide2">
-                <input type="radio" name="slider" id="slide3">
-                <input type="radio" name="slider" id="slide4">
-                <input type="radio" name="slider" id="slide5">
+            <div class="slider-nav">
+                <label for="s1" class="slider-nav-item"></label>
+                <label for="s2" class="slider-nav-item"></label>
+                <label for="s3" class="slider-nav-item"></label>
+                <label for="s4" class="slider-nav-item"></label>
+                <label for="s5" class="slider-nav-item"></label>
             </div>
-            <div class="pictures-content" id="pictures-content">
-                <div class="overflow" id="overflow">
-                    <div class="inner">
-                        <div class="slide slide1">
-                            <div class="slide-content">
-                                <img src="src/img/1.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="slide slide2">
-                            <div class="slide-content">
-                                <img src="src/img/2.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="slide slide3">
-                            <div class="slide-content">
-                                <img src="src/img/3.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="slide slide4">
-                            <div class="slide-content">
-                                <img src="src/img/4.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="slide slide5">
-                            <div class="slide-content">
-                                <img src="src/img/5.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
+            <div class="slider_items">
+
+                <input type="radio" name="s" id="s1">
+                <input type="radio" name="s" id="s2">
+                <input type="radio" name="s" id="s3">
+                <input type="radio" name="s" id="s4">
+                <input type="radio" name="s" id="s5">
+
+                <div class="item s1">
+                    <img src="src/img/1.jpg" alt="">
+                </div>
+                <div class="item s2">
+                    <img src="src/img/2.jpg" alt="">
+                </div>
+                <div class="item s3">
+                    <img src="src/img/3.jpg" alt="">
+                </div>
+                <div class="item s4">
+                    <img src="src/img/4.jpg" alt="">
+                </div>
+                <div class="item s5">
+                    <img src="src/img/5.jpg" alt="">
                 </div>
             </div>
-            <div class="text-content">
-            </div>
-            <div id="controls">
-                <label for="slide1"></label>
-                <label for="slide2"></label>
-                <label for="slide3"></label>
-                <label for="slide4"></label>
-                <label for="slide5"></label>
-            </div>
-            <div id="bullets">
-                <label for="slide1"></label>
-                <label for="slide2"></label>
-                <label for="slide3"></label>
-                <label for="slide4"></label>
-                <label for="slide5"></label>
+            <div class="slider-text">
             </div>
         </div>
     </div>
