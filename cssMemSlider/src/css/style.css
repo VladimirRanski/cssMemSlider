@@ -3,47 +3,52 @@ body {
 }
 
 .container {
-    /*position: relative;*/
-    /*padding-top: 10vh;*/
     width: 70%;
     height: 70%;
     margin: 0 auto;
     padding-top: 5vh;
     background-color: white;
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
 }
 
 .slider {
-    /*position: relative;*/
-    /*overflow: hidden;*/
-    max-width: 1200px;
     margin: 0 auto;
-    /*height: auto;*/
 }
 
 .slider_items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+
 }
 
 .picture-block {
     margin: 0 auto;
-    width: 100% ;
+    width: 70vw ;
     height: 80%;
-    /*text-align: center;*/
     background-color: darkgray;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+
 }
 
+
+/*.picture-block .s1 {*/
+/*    height: 80%;*/
+/*}*/
+/*.picture-block .s2 {*/
+/*    height: 80%;*/
+/*}*/
+/*.picture-block .s3 {*/
+/*    height: 80%;*/
+/*}*/
+
 .picture-block img {
+    object-fit: cover;
     width: auto;
-    max-height: 100%;
+    /*max-height: 100%;*/
+    height: 100%;
 
 }
 
@@ -58,14 +63,10 @@ body {
     display: inline-block;
 }
 
-.slider_items .item {
-}
+/*.slider_items .item {*/
+/*    transition: all .5s ease;*/
+/*}*/
 
-.slider_items .item img {
-    /*max-width: 100%;*/
-    height: auto;
-    /*max-height: 90vh;*/
-}
 
 .slider_items input {
     position: absolute;
@@ -91,69 +92,102 @@ body {
     background-color: #000000;
 }
 
-
+.nav-text {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 #s1:checked ~ .picture-block .s1 {
     display: block;
 }
-#s1:checked ~ .slider-text .s1 {
+#s1:checked ~ .nav-text .slider-text .s1 {
     display: inline-block;
 }
-#s1:checked ~ .slider-nav #c1 {
+#s1:checked ~ .nav-text .slider-nav #c1 {
     background-color: #723372;
 }
-#s1:checked ~ .slider-nav #c1:hover {
+#s1:checked ~ .nav-text .slider-nav #c1:hover {
     background-color: #000;
 }
+
 
 #s2:checked ~ .picture-block .s2 {
     display: block;
 }
-#s2:checked ~ .slider-text .s2 {
+#s2:checked ~ .nav-text .slider-text .s2 {
     display: inline-block;
 }
-#s2:checked ~ .slider-nav #c2 {
+#s2:checked ~ .nav-text .slider-nav #c2 {
     background-color: #723372;
 }
-#s2:checked ~ .slider-nav #c2:hover {
+#s2:checked ~ .nav-text .slider-nav #c2:hover {
     background-color: #000;
 }
 
 #s3:checked ~ .picture-block .s3 {
     display: block;
 }
-#s3:checked ~ .slider-text .s3 {
+#s3:checked ~ .nav-text .slider-text .s3 {
     display: inline-block;
 }
-#s3:checked ~ .slider-nav #c3 {
+#s3:checked ~ .nav-text .slider-nav #c3 {
     background-color: #723372;
 }
-#s3:checked ~ .slider-nav #c3:hover {
+#s3:checked ~ .nav-text .slider-nav #c3:hover {
     background-color: #000;
 }
 
 #s4:checked ~ .picture-block .s4 {
     display: block;
 }
-#s4:checked ~ .slider-text .s4 {
+#s4:checked ~ .nav-text .slider-text .s4 {
     display: inline-block;
 }
-#s4:checked ~ .slider-nav #c4 {
+#s4:checked ~ .nav-text .slider-nav #c4 {
     background-color: #723372;
 }
-#s4:checked ~ .slider-nav #c4:hover {
+#s4:checked ~ .nav-text .slider-nav #c4:hover {
     background-color: #000;
 }
 
 #s5:checked ~ .picture-block .s5 {
     display: block;
 }
-#s5:checked ~ .slider-text .s5 {
+#s5:checked ~ .nav-text .slider-text .s5 {
     display: inline-block;
 }
-#s5:checked ~ .slider-nav #c5 {
+#s5:checked ~ .nav-text .slider-nav #c5 {
     background-color: #723372;
 }
-#s5:checked ~ .slider-nav #c5:hover {
+#s5:checked ~ .nav-text .slider-nav #c5:hover {
     background-color: #000;
+}
+
+@media (max-width: 768px) {
+
+    .picture-block img {
+        height: 100%;
+        width: auto;
+    }
+
+    .slider_items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .nav-text .slider_text {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+    .nav-text .slider-nav {
+        text-align: center;
+    }
 }
