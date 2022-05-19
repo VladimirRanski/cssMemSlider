@@ -32,7 +32,7 @@ body {
 
 .text-item {
     font-size: 1.5rem;
-    text-align: center;
+    text-align: left;
     color: blue;
 }
 
@@ -192,12 +192,15 @@ body {
         flex-direction: column;
         align-items: center;
     }
+    .slider-text {
+        width: 100%;
+    }
     .nav-text {
         width: 100%;
         display: flex;
         flex-direction: column-reverse;
     }
-    .nav-text .slider_text {
+    .nav-text .text_item {
         display: block;
         width: 100%;
         text-align: left;
