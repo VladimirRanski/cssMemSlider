@@ -2,68 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MemSlider</title>
     <link rel="stylesheet" href="src/css/normalize.css">
-    <link rel="stylesheet" href="src/css/stile.css">
+    <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
     <div class="container">
-        <h1> Все в процессе к вечеру среды доделаю.<br>Спасибо за понимание</h1>
+<!--        <h1> Все в процессе к вечеру среды доделаю.<br>Спасибо за понимание</h1>-->
         <div class="slider">
-            <div class="nav-btn">
-                <input type="radio" name="slider" id="slide1" checked>
-                <input type="radio" name="slider" id="slide2">
-                <input type="radio" name="slider" id="slide3">
-                <input type="radio" name="slider" id="slide4">
-                <input type="radio" name="slider" id="slide5">
-            </div>
-            <div class="pictures-content" id="pictures-content">
-                <div class="overflow" id="overflow">
-                    <div class="inner">
-                        <div class="slide slide1">
-                            <div class="slide-content">
-                                <img src="src/img/1.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="slide slide2">
-                            <div class="slide-content">
-                                <img src="src/img/2.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="slide slide3">
-                            <div class="slide-content">
-                                <img src="src/img/3.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="slide slide4">
-                            <div class="slide-content">
-                                <img src="src/img/4.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="slide slide5">
-                            <div class="slide-content">
-                                <img src="src/img/5.jpg" alt="">
-                            </div>
-                        </div>
+
+            <div class="slider_items">
+
+                <input type="radio" name="s" id="s1" checked>
+                <input type="radio" name="s" id="s2">
+                <input type="radio" name="s" id="s3">
+                <input type="radio" name="s" id="s4">
+                <input type="radio" name="s" id="s5">
+
+                <div class="picture-block">
+                    <div class="s1">
+                        <img src="src/img/1.jpg" alt="">
+                    </div>
+                    <div class="s2">
+                        <img src="src/img/2.jpg" alt="">
+                    </div>
+                    <div class="s3">
+                        <img src="src/img/3.jpg" alt="">
+                    </div>
+                    <div class="s4">
+                        <img src="src/img/4.jpg" alt="">
+                    </div>
+                    <div class="s5">
+                        <img src="src/img/5.jpg" alt="">
                     </div>
                 </div>
+
+                <div class="nav-text">
+                    <div class="slider-text">
+                        <div class="slider-text-item s1">
+                            <p class="text-item">Только предоплата и только 100%</p>
+                        </div>
+                        <div class="slider-text-item s2">
+                            <p class="text-item">Зря плата...</p>
+                        </div>
+                        <div class="slider-text-item s3">
+                            <p class="text-item">И снова.....</p>
+                        </div>
+                        <div class="slider-text-item s4">
+                            <p class="text-item">Программирование - оно такое....</p>
+                        </div>
+                        <div class="slider-text-item s5">
+                            <p class="text-item">Наши чемпионы</p>
+                        </div>
+                    </div>
+
+                    <div class="slider-nav">
+                        <label for="s1" id="c1" class="slider-nav-item c1">
+                            <span class="nav-circle"></span>
+                        </label>
+                        <label for="s2" id="c2" class="slider-nav-item с2">
+                            <span class="nav-circle"></span>
+                        </label>
+                        <label for="s3" id="c3" class="slider-nav-item с3">
+                            <span class="nav-circle"></span>
+                        </label>
+                        <label for="s4" id="c4" class="slider-nav-item с4">
+                            <span class="nav-circle"></span>
+                        </label>
+                        <label for="s5" id="c5" class="slider-nav-item с5">
+                            <span class="nav-circle"></span>
+                        </label>
+                    </div>
+                </div>
+
+
             </div>
-            <div class="text-content">
-            </div>
-            <div id="controls">
-                <label for="slide1"></label>
-                <label for="slide2"></label>
-                <label for="slide3"></label>
-                <label for="slide4"></label>
-                <label for="slide5"></label>
-            </div>
-            <div id="bullets">
-                <label for="slide1"></label>
-                <label for="slide2"></label>
-                <label for="slide3"></label>
-                <label for="slide4"></label>
-                <label for="slide5"></label>
-            </div>
+
         </div>
     </div>
 </body>
