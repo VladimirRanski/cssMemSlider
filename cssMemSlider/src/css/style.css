@@ -7,7 +7,6 @@ body {
     height: 70%;
     margin: 0 auto;
     padding-top: 5vh;
-    background-color: white;
 }
 
 .slider {
@@ -18,38 +17,29 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
 }
 
 .picture-block {
     margin: 0 auto;
     width: 70vw ;
-    height: 80%;
+    height: auto;
     background-color: darkgray;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-
 }
 
-
-/*.picture-block .s1 {*/
-/*    height: 80%;*/
-/*}*/
-/*.picture-block .s2 {*/
-/*    height: 80%;*/
-/*}*/
-/*.picture-block .s3 {*/
-/*    height: 80%;*/
-/*}*/
+.text-item {
+    font-size: 1.5rem;
+    text-align: center;
+    color: blue;
+}
 
 .picture-block img {
-    object-fit: cover;
+    object-fit: contain;
     width: auto;
-    /*max-height: 100%;*/
     height: 100%;
-
 }
 
 .slider_items input {
@@ -63,32 +53,37 @@ body {
     display: inline-block;
 }
 
-/*.slider_items .item {*/
-/*    transition: all .5s ease;*/
-/*}*/
-
-
 .slider_items input {
     position: absolute;
     visibility: hidden;
 }
 
 .slider-nav {
-    display: inline-block;
+    display: flex;
 }
-
 
 .slider-nav .slider-nav-item {
-    display: inline-block;
-    width: 25px;
-    height: 25px;
+    display: flex;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 100%;
-    border: 2px solid #680606;
-    margin: 7px;
+    margin: 0.7rem;
     cursor: pointer;
+    padding: 0.5rem;
     transition: all .5s ease;
+    justify-content: center;
+    align-items: center;
 }
-.slider-nav .slider-nav-item:hover {
+
+.nav-circle {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    border: 0.2rem solid #680606;
+}
+
+
+.slider-nav-item:hover > .nav-circle{
     background-color: #000000;
 }
 
@@ -101,67 +96,87 @@ body {
 
 #s1:checked ~ .picture-block .s1 {
     display: block;
+    animation-name: slide_change;
+    animation-duration: 1.5s;
 }
 #s1:checked ~ .nav-text .slider-text .s1 {
     display: inline-block;
+    animation-name: slide_change;
+    animation-duration: 1.5s;
 }
-#s1:checked ~ .nav-text .slider-nav #c1 {
+#s1:checked ~ .nav-text .slider-nav #c1 .nav-circle {
     background-color: #723372;
 }
-#s1:checked ~ .nav-text .slider-nav #c1:hover {
+#s1:checked ~ .nav-text .slider-nav #c1:hover .nav-circle {
     background-color: #000;
 }
 
 
 #s2:checked ~ .picture-block .s2 {
     display: block;
+    animation-name: slide_change;
+    animation-duration: 1.5s;
 }
 #s2:checked ~ .nav-text .slider-text .s2 {
     display: inline-block;
+    animation-name: slide_change;
+    animation-duration: 1.5s;
 }
-#s2:checked ~ .nav-text .slider-nav #c2 {
+#s2:checked ~ .nav-text .slider-nav #c2 .nav-circle {
     background-color: #723372;
 }
-#s2:checked ~ .nav-text .slider-nav #c2:hover {
+#s2:checked ~ .nav-text .slider-nav #c2:hover .nav-circle {
     background-color: #000;
 }
 
 #s3:checked ~ .picture-block .s3 {
     display: block;
+    animation-name: slide_change;
+    animation-duration: 1.5s;
 }
 #s3:checked ~ .nav-text .slider-text .s3 {
     display: inline-block;
+    animation-name: slide_change;
+    animation-duration: 1.5s;
 }
-#s3:checked ~ .nav-text .slider-nav #c3 {
+#s3:checked ~ .nav-text .slider-nav #c3 .nav-circle {
     background-color: #723372;
 }
-#s3:checked ~ .nav-text .slider-nav #c3:hover {
+#s3:checked ~ .nav-text .slider-nav #c3:hover .nav-circle {
     background-color: #000;
 }
 
 #s4:checked ~ .picture-block .s4 {
     display: block;
+    animation-name: slide_change;
+    animation-duration: 1.5s;
 }
 #s4:checked ~ .nav-text .slider-text .s4 {
     display: inline-block;
+    animation-name: slide_change;
+    animation-duration: 1.5s;
 }
-#s4:checked ~ .nav-text .slider-nav #c4 {
+#s4:checked ~ .nav-text .slider-nav #c4 .nav-circle {
     background-color: #723372;
 }
-#s4:checked ~ .nav-text .slider-nav #c4:hover {
+#s4:checked ~ .nav-text .slider-nav #c4:hover .nav-circle {
     background-color: #000;
 }
 
 #s5:checked ~ .picture-block .s5 {
     display: block;
+    animation-name: slide_change;
+    animation-duration: 1.5s;
 }
 #s5:checked ~ .nav-text .slider-text .s5 {
     display: inline-block;
+    animation-name: slide_change;
+    animation-duration: 1.5s;
 }
-#s5:checked ~ .nav-text .slider-nav #c5 {
+#s5:checked ~ .nav-text .slider-nav #c5 .nav-circle {
     background-color: #723372;
 }
-#s5:checked ~ .nav-text .slider-nav #c5:hover {
+#s5:checked ~ .nav-text .slider-nav #c5:hover .nav-circle {
     background-color: #000;
 }
 
@@ -190,4 +205,9 @@ body {
     .nav-text .slider-nav {
         text-align: center;
     }
+}
+
+@keyframes slide_change {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
