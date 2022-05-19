@@ -21,7 +21,7 @@ body {
 
 .picture-block {
     margin: 0 auto;
-    width: 70vw ;
+    max-width: 100% ;
     height: auto;
     background-color: darkgray;
     display: flex;
@@ -37,9 +37,9 @@ body {
 }
 
 .picture-block img {
-    object-fit: contain;
-    width: auto;
-    height: 100%;
+    /*object-fit: contain;*/
+    /*width: auto;*/
+    /*height: 100%;*/
 }
 
 .slider_items input {
